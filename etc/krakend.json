@@ -54,7 +54,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["registrar","student","professor"],
+          "roles": ["student"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -74,7 +74,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["student"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -94,7 +94,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["student"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -114,7 +114,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["student"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -134,7 +134,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["registrar","student","professor"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -154,7 +154,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["student"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -174,7 +174,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["student"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -194,7 +194,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["professor"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -214,7 +214,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["professor"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -234,7 +234,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["professor"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -254,7 +254,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["professor"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -274,7 +274,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["professor"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -294,7 +294,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["registrar"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -314,7 +314,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["registrar"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
@@ -334,7 +334,7 @@
         "auth/validator": {
           "alg": "RS256",
           "roles_key": "roles",
-          "roles": ["user"],
+          "roles": ["registrar"],
           "jwk_local_path": "./enrollment_service/public.json",
           "disable_jwk_security": true,
           "operation_debug": true
