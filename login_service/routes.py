@@ -1,6 +1,7 @@
 import contextlib
 import itertools
 import sqlite3
+import logging.config
 
 from fastapi import Depends, HTTPException, APIRouter, status
 from login_service.database.schemas import Users,Userlogin
@@ -12,13 +13,20 @@ database = "./var/primary/fuse/database.db"
 database_reps = itertools.cycle(["./var/secondary/fuse/database.db", "./var/tertiary/fuse/database.db"])
 ALLOWED_ROLES = {"student", "professor", "registrar"}
 
+def get_logger():
+    return logging.getLogger(__name__)
+
 # Connect to the database
-def get_db():
+def get_db(logger: logging.Logger = Depends(get_logger)):
     with contextlib.closing(sqlite3.connect(database, check_same_thread=False)) as db:
         db.row_factory = sqlite3.Row
+        db.set_trace_callback(logger.debug)
         yield db
 
-def get_db_replicas():
+logging.config.fileConfig("./etc/logging.ini", disable_existing_loggers=False)
+
+
+def get_db_replicas(logger: logging.Logger = Depends(get_logger)):
 
     curr_db = next(database_reps)
 
@@ -41,6 +49,7 @@ def get_db_replicas():
 
     with contextlib.closing(connection) as db:
             db.row_factory = sqlite3.Row
+            db.set_trace_callback(logger.debug)
             yield db
 
 @router.post("/register")
